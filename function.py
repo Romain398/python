@@ -9,56 +9,7 @@ def getDataFromCSV(csvfilename):
         reader=csv.DictReader(f, delimiter=';')
         for content in reader :
             csv_list_of_dict.append(content)
-            """
-            NUM_FEUILLET =content['FEUILLET']
-            CODE_SITE =content['Code site']
-            COMMUNE =content['Commune']
-            ADMIN_ROUTEUR_VSAT =content['@IP  Admin routeur VSAT']
-            INTERCO_MODEM_VLAN =content['INTERCO MODEM VLAN']
-            INTERCO_MODEM_IP_MODEM =content['INTERCO MODEM - @IP  Modem']
-            INTERCO_MODEM_NETMASK_MODEM =content['INTERCO MODEM - Netmask Modem']
-            PS_VRF_EXPLOITATION_NO_VLAN =content['PS - VRF EXPLOITATION- No VLAN']
-            PS_VRF_EXPLOITATION_IP_MODEM =content['PS - VRF EXPLOITATION - @IP  Modem']
-            PS_VRF_EXPLOITATION_NETMASK_MODEM =content['PS - VRF EXPLOITATION - Netmask Modem']
-            PS_VRF_CONDUITE_NO_VLAN =content['PS - VRF CONDUITE_xxx - No VLAN']
-            PS_VRF_CONDUITE_VLAN_IP_MODEM =content['PS - VRF CONDUITE_xxx - VLAN #4 - @IP  Modem']
-            PS_VRF_CONDUITE_VLAN_NETMASK_MODEM =content['PS - VRF CONDUITE_xxx - VLAN #4 - Netmask Modem']
-            PS_VRF_CONDUITE_NOM_VRF =content['PS - VRF CONDUITE_xxx  - NOM VRF']
-
-            afficher = ["Num_feuillet : "+ NUM_FEUILLET,
-                        "Code site : " + CODE_SITE,
-                        "Commune : " + COMMUNE,
-                        "IP Admin routeur VSAT : " + ADMIN_ROUTEUR_VSAT,
-                        "Interco Modem VLAN : "+ INTERCO_MODEM_VLAN,
-                        "IP  Interco modem : "+ INTERCO_MODEM_IP_MODEM,
-                        "Netmask interco modem : "+ INTERCO_MODEM_NETMASK_MODEM,
-                        "PS - VRF Exploitation - NO VLAN : "+ PS_VRF_EXPLOITATION_NO_VLAN,
-                        "PS - VRF Exploitation - IP Modem : "+ PS_VRF_EXPLOITATION_IP_MODEM,
-                        "PS - VRF Exploitation - Netmask Modem : "+ PS_VRF_EXPLOITATION_NETMASK_MODEM,
-                        "PS - VRF Conduite - NO VLAN : "+ PS_VRF_CONDUITE_NO_VLAN,
-                        "PS - VRF Conduite - VLAN IP Modem : "+ PS_VRF_CONDUITE_VLAN_IP_MODEM,
-                        "PS - VRF Conduite - VLAN Netmask Modem : "+ PS_VRF_CONDUITE_VLAN_NETMASK_MODEM,
-                        "PS - VRF Conduite - Nom VRF : "+PS_VRF_CONDUITE_NOM_VRF]
-
-            list_csv=[]
-            TotalInfo_csv={}
-            list_csv=TotalInfo_csv
-
-            TotalInfo_csv['Feuillet'] = str(NUM_FEUILLET)
-            TotalInfo_csv['Code_Site'] = str(CODE_SITE)
-            TotalInfo_csv['Commune'] = str(COMMUNE)
-            TotalInfo_csv['Admin_Routeur_VSAT'] = str(ADMIN_ROUTEUR_VSAT)                                # Création d'indexs
-            TotalInfo_csv['Interco_Modem_VLAN'] = str(INTERCO_MODEM_VLAN)                                # au dictionnaire TotalInfo
-            TotalInfo_csv['Interco_Modem_IP'] = str(INTERCO_MODEM_IP_MODEM)
-            TotalInfo_csv['Interco_Modem_Netmask_Modem'] = str(INTERCO_MODEM_NETMASK_MODEM)
-            TotalInfo_csv['PS_VRF_Exploitation_NO_VLAN'] = str(PS_VRF_EXPLOITATION_NO_VLAN)
-            TotalInfo_csv['PS_VRF_Exploitation_IP_Modem'] = str(PS_VRF_EXPLOITATION_IP_MODEM)
-            TotalInfo_csv['PS_VRF_Exploitation_Netmask_Modem'] = str(PS_VRF_EXPLOITATION_NETMASK_MODEM)
-            TotalInfo_csv['PS_VRF_Conduite_NO_VLAN'] = str(PS_VRF_CONDUITE_NO_VLAN)
-            TotalInfo_csv['PS_VRF_Conduite_Vlan_IP_Modem'] = str(PS_VRF_CONDUITE_VLAN_IP_MODEM)
-            TotalInfo_csv['PS_VRF_Conduite_VLAN_Netmask_Modem'] = str(PS_VRF_CONDUITE_VLAN_NETMASK_MODEM)
-            TotalInfo_csv['PS_VRF_Conduite_Nom_VRF'] = str(PS_VRF_CONDUITE_NOM_VRF)
-            """
+     
     return csv_list_of_dict
     
             # print("Taille du dictionaire du CSV : {}".format(len(list_csv)))
@@ -153,24 +104,5 @@ def compareDatasBetweenFiles(jsondict,csv_data,site_exist):
 
 
 
-"""
-            if feuillet_csv == feuillet_json  :
-                #print("Les données sont conformes","csv =>",feuillet_csv,"json =>",feuillet_json,)  
-                print()      
-            else: 
-                #print("erreur :","csv =>",feuillet_csv,"json =>",feuillet_json)
-                error_feuillet = ["Erreur Feuillet:", feuillet_csv, "donnée attendue :", feuillet_json]
-                list_of_errors.append(error_feuillet)
-                    
-            if descr_json in descr_csv  :
-                #print("Les données sont conformes","csv =>",descr_csv,"json =>",descr_json)
-                print() 
-
-            else: 
-                #print("erreur :","csv =>",descr_csv,"json =>",descr_json)
-                error_descr = ["Erreur Site:", descr_csv, "donnée attendue :", descr_json]
-                list_of_errors.append(error_descr)
-                print(*list_of_errors, sep='\n\n\n')
-"""
 
      
